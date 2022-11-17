@@ -16,7 +16,6 @@ import kotlinx.coroutines.*
 
 
 class FirstFragment : Fragment() {
-
     private lateinit var binding: FragmentFirstBinding
     private var viewModelJob = Job()
     private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
@@ -27,7 +26,6 @@ class FirstFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentFirstBinding.inflate(layoutInflater, container, false)
-
 
         val networkData = NetworkData(requireActivity())
         val repo = Repository()
@@ -47,10 +45,7 @@ class FirstFragment : Fragment() {
                 }
             }
         }
-
         return binding.root
     }
-
-
 
 }
